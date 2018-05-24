@@ -12,5 +12,5 @@ Once you've tapped this repository, you can use `brew` to install and update Kol
 
 ```
 brew update
-brew install fleet
+brew install fleetctl
 ```
