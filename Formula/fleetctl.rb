@@ -7,6 +7,8 @@ class Fleetctl < Formula
   head "https://github.com/kolide/fleet.git"
 
   depends_on "go" => :build
+  depends_on "dep" => :build
+  depends_on "go-bindata" => :build
   depends_on "node" => :build
   depends_on "yarn" => :build
 
@@ -20,7 +22,8 @@ class Fleetctl < Formula
     ENV.prepend_create_path "PATH", gopath/"src/github.com/kolide/fleet/node_modules/.bin"
 
     cd gopath/"src/github.com/kolide/fleet" do
-      system "make", "deps"
+      system "yarn"
+      system "dep", "ensure", "-vendor-only"
       system "make", "generate"
       system "make", "fleetctl"
       bin.install "build/fleetctl"
