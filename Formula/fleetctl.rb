@@ -1,4 +1,4 @@
-class Fleet < Formula
+class Fleetctl < Formula
   desc "Open Source Osquery Fleet Manager"
   homepage "https://kolide.com/fleet"
   url "https://github.com/kolide/fleet/archive/2.0.0-rc1.tar.gz"
@@ -22,13 +22,13 @@ class Fleet < Formula
     cd gopath/"src/github.com/kolide/fleet" do
       system "make", "deps"
       system "make", "generate"
-      system "make", "fleet"
-      bin.install "build/fleet"
+      system "make", "fleetctl"
+      bin.install "build/fleetctl"
       prefix.install_metafiles
     end
   end
 
   test do
-    system "#{bin}/fleet", "version"
+    system "#{bin}/fleetctl", "--version"
   end
 end
