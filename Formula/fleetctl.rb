@@ -1,8 +1,8 @@
 class Fleetctl < Formula
   desc "Open Source Osquery Fleet Manager"
   homepage "https://kolide.com/fleet"
-  url "https://github.com/kolide/fleet/archive/2.0.0-rc1.tar.gz"
-  sha256 "8a1277639cbbd4c973cd8fbffda26ea36d478c04a92696be71473cfc92bb0ffd"
+  url "https://github.com/kolide/fleet/archive/2.0.0-rc2.tar.gz"
+  sha256 "bc85b2421f9afb72f679790e4a9590384d8f28ec44a68f255d11489eaa72cb3d"
 
   head "https://github.com/kolide/fleet.git"
 
